@@ -12,5 +12,5 @@ class AssetSerializer(serializers.ModelSerializer):
         # Auto-fill created_date, created_time, and entity_type
         validated_data['created_date'] = timezone.now().date()
         validated_data['created_time'] = timezone.now().time()
-        validated_data['entity_type'] = 'DEVICE_PROFILE'
+        validated_data['entity_type'] = 'ASSET'
         return super().create(validated_data)
