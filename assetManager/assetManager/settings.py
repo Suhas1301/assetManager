@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'assetprofile',
     'deviceprofile',
-    'device',
-    'asset'
+    'asset',
+    'device'
 ]
 
 MIDDLEWARE = [

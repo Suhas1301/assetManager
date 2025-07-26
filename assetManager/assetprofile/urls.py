@@ -3,7 +3,7 @@ from rest_framework.routers import DefaultRouter
 from .views import AssetProfileViewSet
 
 router = DefaultRouter()
-router.register(r'assetprofiles', AssetProfileViewSet, basename='assetprofile')
+router.register(r'assetprofile', AssetProfileViewSet, basename='assetprofile')
 
 urlpatterns = [
     path('', include(router.urls)),

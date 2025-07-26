@@ -5,7 +5,7 @@ from django.utils import timezone
 class AssetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Asset
-        fields = ['id', 'name', 'created_date', 'created_time', 'entity_type']
+        fields = ['id', 'name', 'created_date', 'created_time', 'entity_type', 'asset_profile']
         read_only_fields = ['id', 'created_date', 'created_time', 'entity_type']
 
     def create(self, validated_data):

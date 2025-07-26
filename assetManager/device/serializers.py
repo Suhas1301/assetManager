@@ -5,12 +5,12 @@ from django.utils import timezone
 class DeviceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Device
-        fields = ['id', 'name', 'created_date', 'created_time', 'entity_type']
+        fields = ['id', 'name', 'created_date', 'created_time', 'entity_type', 'device_profile']
         read_only_fields = ['id', 'created_date', 'created_time', 'entity_type']
 
     def create(self, validated_data):
         # Auto-fill created_date, created_time, and entity_type
         validated_data['created_date'] = timezone.now().date()
         validated_data['created_time'] = timezone.now().time()
-        validated_data['entity_type'] = 'DEVICE_PROFILE'
+        validated_data['entity_type'] = 'DEVICE'
         return super().create(validated_data)
