@@ -57,14 +57,6 @@ Login to PostgreSQL and run:
 CREATE DATABASE gateway_db;
 ```
 
-**Option 2: Automatically via script**
-
-```python
-# In a Python file or script, run:
-from create_db import create_database_if_not_exists
-create_database_if_not_exists()
-```
-
 ### 5. Run Migrations
 
 ```bash
